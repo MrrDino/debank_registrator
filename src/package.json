@@ -1,0 +1,13 @@
+{
+  "name": "debank-keys",
+  "version": "1.0.0",
+  "description": "",
+  "main": "keys.js",
+  "type": "module",
+  "author": "Raznorabochiy",
+  "homepage": "https://t.me/cryptolaborer",
+  "license": "ISC",
+  "dependencies": {
+    "@starkware-industries/starkware-crypto-utils": "^0.1.1-dev.1"
+  }
+}
