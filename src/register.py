@@ -75,6 +75,10 @@ class Registrator:
 
             if not l2_acc:
                 await self.register_account(w3=w3, account=account, wallet=wallet, contract=contract)
+
+                delay = random.randint(st.SIGN_DELAY[0], st.SIGN_DELAY[1])
+                logger.info(f"Wait {delay} sec")
+                time.sleep(delay)
             else:
                 logger.info(f"L2 account already exists, address - {l2_acc}")
 
@@ -254,7 +258,7 @@ class Registrator:
 
         try:
             tx = w3.eth.send_raw_transaction(transaction=signed_tx.rawTransaction)
-            logger.info("Transaction sent")
+            logger.info(f"Transaction sent. Transaction - https://bscscan.com/tx/{tx.hex()}")
 
             delay = random.randint(st.SEND_DELAY[0], st.SEND_DELAY[1])
             logger.info(f"Wait {delay} sec")
@@ -262,7 +266,6 @@ class Registrator:
 
             tx_rec = w3.eth.wait_for_transaction_receipt(tx)
             status = tx_rec['status']
-            logger.info(f"Transaction - https://bscscan.com/tx/{tx.hex()}")
         except Exception as err:
             logger.error(err)
         assert status == 1  # проверка на успешное прохождение транзакции

@@ -1,11 +1,14 @@
-from src.register import Registrator
 import asyncio
 
+from src.register import Registrator
 
-def start_register():
+
+def start():
+    """Функция запуска скрипта"""
+
     registrator = Registrator()
     asyncio.run(registrator.register())
 
 
 if __name__ == "__main__":
-    start_register()
+    start()
