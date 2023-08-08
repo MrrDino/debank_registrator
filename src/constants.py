@@ -1,4 +1,4 @@
-REGISTRATOR = '0x9C8E490Bcc40873E6696dE9AF1669aa414d5Eae1'  # Polygon
+REGISTRATOR = '0x9C8E490Bcc40873E6696dE9AF1669aa414d5Eae1' 
 
 L2_TEXT = "Please sign to confirm register DeBank L2 account nonce: 1 on bsc"
 
