@@ -84,6 +84,12 @@ class Registrator:
 
             self.deposit(wallet=wallet, w3=w3, account=account)
 
+            delay = random.randint(st.CHANGE_DELAY[0], st.CHANGE_DELAY[1])
+            logger.info("Change wallet")
+            logger.info(f"Wait {delay} sec")
+            time.sleep(delay)
+
+
     def connect(self) -> Web3:
         """Функция подключения к ноде"""
 
