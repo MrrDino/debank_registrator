@@ -334,4 +334,7 @@ class Registrator:
 
         if code != 200:
             logger.error(f"Error when trying to request to the server. Status code - {code}")
+            if code == 429:
+                logger.error(f"Too many requests, wait 120 sec")
+                time.sleep(120)
             raise Exception
