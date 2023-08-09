@@ -2,7 +2,7 @@
 
 1. Скачайте репозитрой с GitHub:
 
-    ```git clone https://github.com/MrrDino/Stargate-swap.git```
+    ```https://github.com/MrrDino/debank_registrator.git```
 
 2. Перейдите в директорию проекта
 
